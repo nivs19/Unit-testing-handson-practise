@@ -3,6 +3,12 @@ import { stub } from 'sinon';
 import '../src/LoanBasicDetails/BasicDetails.js';
 
 describe('Basic details', () => {
-  // Write test cases inside this block
-  // refer basic-details.js files
+  let el;
+  before(async()=>{
+    el = await fixture('<basic-details></basic-details>');
+  });
+  it('should test html component', async () =>{
+    el = await fixture(html`<div class="form-basic"></div>`);
+    expect(el).to.be.accessible();
+  });
 });
